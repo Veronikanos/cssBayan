@@ -1,0 +1,35 @@
+.memes-wrapper {
+  max-width: 50%;
+  margin: 1rem auto;
+}
+
+/* .memes-wrapper:hover {
+  background-color: bisque;
+  cursor: pointer;
+} */
+
+.mem-item {
+  border: 0.1rem solid black;
+}
+
+.mem-item:hover > .text {
+  display: block;
+}
+
+.mem-title {
+  /* display: block; */
+  background-color: darkgray;
+}
+
+.mem-input {
+  /* width: 100%;
+  appearance: none; */
+}
+
+.mem-input:checked + .text {
+  display: block;
+}
+
+.text {
+  display: none;
+}
