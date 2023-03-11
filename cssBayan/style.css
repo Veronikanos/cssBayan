@@ -6,18 +6,12 @@ p {
   margin: 0;
 }
 
-.memes-wrapper {
-  max-width: 70%;
-  margin: 1rem auto;
-  background-color: rgba(250, 235, 215, 0.699);
-  padding: 1rem;
-  border-radius: 3%;
-}
-
 .mem-item {
   display: block;
   border-bottom: 0.1rem solid black;
   padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .icon-div {
@@ -31,7 +25,11 @@ p {
 }
 
 .memes-wrapper {
-  max-width: 20rem;
+  width: 50%;
+  margin: 1rem auto;
+  background-color: rgba(250, 235, 215, 0.699);
+  padding: 1rem;
+  border-radius: 3%;
   color: cornflowerblue;
   transition: color 0.3s ease;
 }
@@ -92,16 +90,16 @@ p {
   }
 
   .icon-div {
-    width: 0.4rem;
-    height: 0.4rem;
-    border-top: 0.2rem solid black;
-    border-right: 0.2rem solid black;
+    width: 1vw;
+    height: 1vw;
+    border-top: 0.3vw solid black;
+    border-right: 0.3vw solid black;
   }
 }
 
 @media screen and (min-width: 820px) {
   .memes-wrapper {
-    max-width: 25rem;
+    width: 40%;
   }
 
   .mem-title {
@@ -111,33 +109,19 @@ p {
   .mem-input:checked + .mem-image {
     width: 80%;
   }
-
-  .icon-div {
-    width: 0.4rem;
-    height: 0.4rem;
-    border-top: 0.3rem solid black;
-    border-right: 0.3rem solid black;
-  }
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 1920px) {
   .memes-wrapper {
-    max-width: 30rem;
+    width: 30%;
   }
 
   .mem-title {
-    font-size: 2rem;
+    font-size: 2vw;
   }
 
   .mem-input:checked + .mem-image {
     width: 80%;
-  }
-
-  .icon-div {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-top: 0.3rem solid black;
-    border-right: 0.3rem solid black;
   }
 }
 
