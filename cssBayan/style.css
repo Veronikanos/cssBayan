@@ -1,64 +1,47 @@
+html {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0;
+}
+
 .memes-wrapper {
-  max-width: 50%;
+  max-width: 70%;
   margin: 1rem auto;
   background-color: rgba(250, 235, 215, 0.699);
   padding: 1rem;
   border-radius: 3%;
 }
 
-/* .memes-wrapper:hover {
-  background-color: bisque;
-  cursor: pointer;
-} */
-
 .mem-item {
+  display: block;
   border-bottom: 0.1rem solid black;
-  font-size: 1.5rem;
-  /* cursor: pointer; */
-}
-
-.mem-input:not(:checked) {
-  /* color: cornflowerblue; */
-}
-
-.mem-item:has(input[type='radio']:not(:checked)) {
-  /* color: cornflowerblue; */
-}
-
-.mem-item:hover {
-  cursor: pointer;
+  padding-bottom: 0.5rem;
 }
 
 .icon-div {
   display: block;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.3rem;
+  height: 0.3rem;
   transform: rotate(45deg);
-  border-top: 0.2rem solid black;
-  border-right: 0.2rem solid black;
-  transition: transform 0.25s ease-in-out;
+  border-top: 0.1rem solid black;
+  border-right: 0.1rem solid black;
+  transition: transform 0.2s ease-in-out;
 }
 
 .memes-wrapper {
+  max-width: 20rem;
   color: cornflowerblue;
   transition: color 0.3s ease;
-}
-
-.memes-wrapper:hover {
-  color: black;
 }
 
 .mem-item:has(input[type='radio']:checked) {
   color: black;
 }
 
-.mem-item:has(input[type='radio']:checked) .title-wrapper .icon-div,
-.mem-item:hover .title-wrapper .icon-div {
+.mem-item:has(input[type='radio']:checked) .title-wrapper .icon-div {
   transform: rotate(135deg);
-}
-
-.memes-wrapper:hover ~ .mem-input:not(:checked) {
-  color: black;
 }
 
 .mem-title {
@@ -67,14 +50,9 @@
 
 .mem-input {
   width: 100%;
-  /* appearance: none; */
+  appearance: none;
 }
 
-.mem-item:hover > .mem-image {
-  width: 100%;
-  max-height: 100%;
-  transition: all 0.5s ease;
-}
 .mem-input:checked + .mem-image {
   width: 100%;
   max-height: 100%;
@@ -90,7 +68,7 @@
 
 .image-item {
   display: block;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -105,6 +83,84 @@
   align-items: center;
 }
 
-/* @media(hover: hover){
+@media screen and (min-width: 425px) {
+  .mem-title {
+    font-size: 1.5rem;
+  }
+  .mem-input:checked + .mem-image {
+    width: 70%;
+  }
 
-} */
+  .icon-div {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-top: 0.2rem solid black;
+    border-right: 0.2rem solid black;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .memes-wrapper {
+    max-width: 25rem;
+  }
+
+  .mem-title {
+    font-size: 1.8rem;
+  }
+
+  .mem-input:checked + .mem-image {
+    width: 80%;
+  }
+
+  .icon-div {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-top: 0.3rem solid black;
+    border-right: 0.3rem solid black;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .memes-wrapper {
+    max-width: 30rem;
+  }
+
+  .mem-title {
+    font-size: 2rem;
+  }
+
+  .mem-input:checked + .mem-image {
+    width: 80%;
+  }
+
+  .icon-div {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-top: 0.3rem solid black;
+    border-right: 0.3rem solid black;
+  }
+}
+
+@media (hover: hover) {
+  .mem-item:hover {
+    cursor: pointer;
+  }
+
+  .memes-wrapper:hover {
+    color: black;
+  }
+
+  .mem-item:hover > .mem-image {
+    width: 100%;
+    max-height: 100%;
+    transition: all 0.5s ease;
+  }
+
+  .memes-wrapper:hover ~ .mem-input:not(:checked) {
+    color: black;
+  }
+
+  .mem-item:hover .title-wrapper .icon-div {
+    transform: rotate(135deg);
+  }
+}
