@@ -1,6 +1,9 @@
 .memes-wrapper {
   max-width: 50%;
   margin: 1rem auto;
+  background-color: rgba(250, 235, 215, 0.699);
+  padding: 1rem;
+  border-radius: 3%;
 }
 
 /* .memes-wrapper:hover {
@@ -9,33 +12,78 @@
 } */
 
 .mem-item {
-  border: 0.1rem solid black;
+  border-bottom: 0.1rem solid black;
+  font-size: 1.5rem;
+  /* cursor: pointer; */
+}
+
+.mem-input:not(:checked) {
+  /* color: cornflowerblue; */
+}
+
+.mem-item:has(input[type='radio']:not(:checked)) {
+  /* color: cornflowerblue; */
+}
+
+.mem-item:hover {
+  cursor: pointer;
+}
+
+.icon-div {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  transform: rotate(45deg);
+  border-top: 0.2rem solid black;
+  border-right: 0.2rem solid black;
+  transition: transform 0.25s ease-in-out;
+}
+
+.memes-wrapper {
+  color: cornflowerblue;
+  transition: color 0.3s ease;
+}
+
+.memes-wrapper:hover {
+  color: black;
+}
+
+.mem-item:has(input[type='radio']:checked) {
+  color: black;
+}
+
+.mem-item:has(input[type='radio']:checked) .title-wrapper .icon-div,
+.mem-item:hover .title-wrapper .icon-div {
+  transform: rotate(135deg);
+}
+
+.memes-wrapper:hover ~ .mem-input:not(:checked) {
+  color: black;
 }
 
 .mem-title {
-  /* display: block; */
-  background-color: darkgray;
+  display: block;
 }
 
 .mem-input {
-  /* width: 100%;
-  appearance: none; */
+  width: 100%;
+  /* appearance: none; */
 }
 
 .mem-item:hover > .mem-image {
   width: 100%;
-  height: 100%;
-  transition: all 1s ease;
+  max-height: 100%;
+  transition: all 0.5s ease;
 }
 .mem-input:checked + .mem-image {
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   transition: all 1s ease;
 }
 
 .mem-image {
   width: 0;
-  height: 0;
+  max-height: 0;
   margin: 0 auto;
   transition: all 0.5s ease;
 }
@@ -46,8 +94,15 @@
   margin: 0 auto;
 }
 
-.mem-item:has(input[type='radio']:checked) {
-  background-color: darkolivegreen;
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* @media(hover: hover){
