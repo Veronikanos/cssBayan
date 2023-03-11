@@ -12,10 +12,6 @@
   border: 0.1rem solid black;
 }
 
-.mem-item:hover > .text {
-  display: block;
-}
-
 .mem-title {
   /* display: block; */
   background-color: darkgray;
@@ -26,10 +22,30 @@
   appearance: none; */
 }
 
-.mem-input:checked + .text {
+.mem-item:hover > .mem-image {
   display: block;
+  opacity: 1;
+}
+.mem-input:checked + .mem-image {
+  display: block;
+  opacity: 1;
 }
 
-.text {
+.mem-image {
   display: none;
+  opacity: 0;
 }
+
+.image-item {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.mem-item:has(input[type='radio']:checked) {
+  background-color: darkolivegreen;
+}
+
+/* @media(hover: hover){
+
+} */
