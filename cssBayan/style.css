@@ -1,0 +1,160 @@
+html {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0;
+}
+
+.mem-item {
+  display: block;
+  /* border-top: 0.1rem solid black; */
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.mem-item:not(:first-of-type) {
+  border-top: 0.1rem solid rgb(170, 170, 170);
+}
+
+.icon-div {
+  display: block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.memes-wrapper {
+  width: 50%;
+  margin: 1rem auto;
+  background-color: rgba(250, 235, 215, 0.699);
+  padding: 1rem;
+  border-radius: 3%;
+  color: cornflowerblue;
+  transition: color 0.3s ease;
+}
+
+.mem-item:has(input[type='radio']:checked) {
+  color: black;
+}
+
+.mem-item:has(input[type='radio']:checked) .title-wrapper .icon-div {
+  transform: rotate(135deg);
+}
+
+.mem-title {
+  display: block;
+}
+
+.mem-input {
+  width: 100%;
+  appearance: none;
+}
+
+.mem-input:checked + .mem-image {
+  width: 100%;
+  max-height: 100%;
+  transition: all 1s ease;
+}
+
+.mem-image {
+  width: 0;
+  max-height: 0;
+  margin: 0 auto;
+  transition: all 0.5s ease;
+}
+
+.image-item {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 425px) {
+  .mem-title {
+    font-size: 1.5rem;
+  }
+  .mem-input:checked + .mem-image {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .memes-wrapper {
+    width: 40%;
+  }
+
+  .mem-title {
+    font-size: 1.8rem;
+  }
+
+  .mem-input:checked + .mem-image {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .memes-wrapper {
+    width: 30%;
+  }
+
+  .mem-title {
+    font-size: 2vw;
+  }
+
+  .mem-input:checked + .mem-image {
+    width: 80%;
+  }
+}
+
+@media not all and (hover: hover) {
+  .icon-div {
+    width: 0.5rem;
+    height: 0.5rem;
+    transform: rotate(45deg);
+    border-top: 0.2rem solid black;
+    border-right: 0.2rem solid black;
+  }
+}
+
+@media (hover: hover) {
+  .mem-item:hover {
+    cursor: pointer;
+  }
+
+  .memes-wrapper:hover {
+    color: black;
+  }
+
+  .memes-wrapper:hover .icon-div {
+    width: 0.5rem;
+    height: 0.5rem;
+    transform: rotate(45deg);
+    border-top: 0.2rem solid black;
+    border-right: 0.2rem solid black;
+  }
+
+  .mem-item:hover > .mem-image {
+    width: 100%;
+    max-height: 100%;
+    transition: all 0.5s ease;
+  }
+
+  .memes-wrapper:hover ~ .mem-input:not(:checked) {
+    color: black;
+  }
+
+  .mem-item:hover .title-wrapper .icon-div {
+    transform: rotate(135deg);
+  }
+}
